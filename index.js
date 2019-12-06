@@ -268,6 +268,8 @@ function counterMaker() {
  * A counter created with it will reset itself after reaching the max value.
  * Usage is as follows:
  * 
+ * @param {number} limit the maximum value of the counter, after which it resets
+ * 
  * const counter = counterMakerWithLimit(3)
  * counter() // should return 0
  * counter() // should return 1
@@ -280,10 +282,10 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit() {
+function counterMakerWithLimit(limit) {
   let count = -1;
   return function(){
-    return(++count > 3 ? count=0 : count);
+    return(++count > limit ? count=0 : count);
   }
 }
 
