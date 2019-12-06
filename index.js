@@ -145,8 +145,8 @@ function processContains(item,list,callback) {
  * @instructions
  * Implement a higher-order function called `processDuplicateFree`.
  * It takes two arguments:
- * @param list array of elements of any kind.
- * @param callback function that takes an array as its argument.
+ * @param {any[]} list array of elements of any kind.
+ * @param {function} callback function that takes an array as its argument.
  * @returns the result of invoking `callback` passing a de-duped version of `list`.
  * 
  * Examples of usage of this higher-order function:
@@ -156,8 +156,14 @@ function processContains(item,list,callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list,callback) {
+  
+  let output = [];
+  list.forEach(a=>{
+    if(!output.includes(a)) output.push(a);
+  });
+  return callback(output);
+
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
