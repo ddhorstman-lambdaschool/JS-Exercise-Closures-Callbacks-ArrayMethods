@@ -207,12 +207,12 @@ function firstNamesAllCaps(runners) {
  * Implement this function using filter().
  * 
  * @param runners array of runners like the one inside the /data/runners.js file.
- * @param tShirtSize string (possible values are "S", "M", "L", "XL", "2XL", "3XL").
+ * @param size string (possible values are "S", "M", "L", "XL", "2XL", "3XL").
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners,size) {
+  return runners.filter(a=>a.tShirtSize===size);
 }
 
 /**
