@@ -275,9 +275,11 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit() {
-  let count = 0;
+  let count = -1;
   return function(){
-    return ++count % 3;
+    count++;
+    if(count>3)count=0;
+    return count;
   }
 }
 
