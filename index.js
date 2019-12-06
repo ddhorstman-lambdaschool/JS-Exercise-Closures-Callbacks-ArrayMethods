@@ -97,9 +97,9 @@ function processSum(numberList, callback) {
  * @instructions
  * Implement a higher-order function called `processProduct`.
  * It takes three arguments:
- * @param num1 a number.
- * @param num2 a number.
- * @param callback function that takes a number as its argument.
+ * @param {number} x a number.
+ * @param {number} y a number.
+ * @param {function} callback function that takes a number as its argument.
  * @returns the result of invoking `callback` passing the PRODUCT of `num1` and `num2`.
  * 
  * Examples of usage of this higher-order function:
@@ -109,8 +109,8 @@ function processSum(numberList, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(x,y,callback) {
+  return callback(x*y);
 }
 
 /**
