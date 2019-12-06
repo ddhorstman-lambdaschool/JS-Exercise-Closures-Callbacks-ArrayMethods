@@ -76,8 +76,8 @@ function processLastItem(stringList,callback) {
  * @instructions
  * Implement a higher-order function called `processSum`.
  * It takes two arguments:
- * @param numberList array of numbers.
- * @param callback function that takes a number as its argument.
+ * @param {number[]} numberList array of numbers.
+ * @param {function} callback function that takes a number as its argument.
  * @returns the result of invoking `callback` passing the SUM of all elements in `numberList`.
  * 
  * Examples of usage of this higher-order function:
@@ -87,8 +87,8 @@ function processLastItem(stringList,callback) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(numberList, callback) {
+  return callback(numberList.reduce((ac,val)=>ac+val,0));
 }
 
 /**
